@@ -15,6 +15,7 @@ This application includes the following list of technologies:
 - Spring Data JPA: Ensuring streamlined and effective data retrieval and persistence.
 - Liquibase: Employed for the management and versioning of database schemas, simplifying schema modifications and ensuring uniform data structure across diverse environments.
 - Lombok: Automatically generates the necessary code to avoid writing boilerplate code.
+- Spring Shell: Allows conveniently work directly with the console through special annotations, which improves code readability.
 ## API Functionalities
 This application contains one controller - the University controller, which is responsible for providing information about departments and lectors. More details about each of its functions can be found in the Controllers functionalities section.
 ## Controllers functionalities
@@ -41,7 +42,7 @@ This application contains one controller - the University controller, which is r
 
    - User Input: 
    ```
-   Show {department_name} statistics
+   Show statistics for {department_name} 
    ```
    - Answer: 
    ```
@@ -52,7 +53,7 @@ This application contains one controller - the University controller, which is r
    **Example** :
    - User Input: 
    ```
-   Show FICT statistics
+   Show statistics for FICT
    ```
    - Answer:
    ```

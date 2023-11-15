@@ -2,30 +2,37 @@ package com.example.lectorsdepartment.controller;
 
 import com.example.lectorsdepartment.service.UniversityService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
+import org.springframework.shell.standard.ShellComponent;
+import org.springframework.shell.standard.ShellMethod;
+import org.springframework.shell.standard.ShellOption;
 
-@Controller
+@ShellComponent
 @RequiredArgsConstructor
 public class UniversityController {
     private final UniversityService universityService;
 
-    public String getHeadOfDepartment(String departmentName) {
+    @ShellMethod(key = "Who is head of department")
+    public String getHeadOfDepartment(@ShellOption String departmentName) {
         return universityService.getHeadOfDepartment(departmentName);
     }
 
-    public String getStatistics(String departmentName) {
+    @ShellMethod(key = "Show statistics for")
+    public String getStatistics(@ShellOption String departmentName) {
         return universityService.getStatistics(departmentName);
     }
 
-    public String getAverageSalary(String departmentName) {
+    @ShellMethod(key = "Show the average salary for the department")
+    public String getAverageSalary(@ShellOption String departmentName) {
         return universityService.getAverageSalary(departmentName);
     }
 
-    public String getEmployeeCount(String departmentName) {
+    @ShellMethod(key = "Show count of employee for")
+    public String getEmployeeCount(@ShellOption String departmentName) {
         return universityService.getEmployeeCount(departmentName);
     }
 
-    public String searchByTemplate(String template) {
+    @ShellMethod(key = "Global search by")
+    public String searchByTemplate(@ShellOption String template) {
         return universityService.searchByTemplate(template);
     }
 
