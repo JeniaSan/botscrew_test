@@ -6,6 +6,7 @@ This application is a university system that allows students to find out informa
 - [Controllers](#api-functionalities)
 - [Required downloads](#a-list-of-what-needs-to-be-installed-to-run-this-application)
 - [Start app](#how-to-start-this-app)
+- [Video presentation](#video-presentation)
 ## Introduction
 This application is a spring boot application designed for managing information about university departments and lectors through a console-based interface.
 This project includes many different technologies for fast and reliable operation of the application.
@@ -132,4 +133,6 @@ But before run, you need to configure the connection to your local database in t
 ```bash
  mvn spring-boot:run
 ```
-
+## Video presentation
+This video shows the operation of the application in details.
+**Link** : https://www.loom.com/share/4b54a543c10b4079973d7f40232ecac7?sid=a53f2b7d-bef5-4438-9d97-77f4daf3cffc
