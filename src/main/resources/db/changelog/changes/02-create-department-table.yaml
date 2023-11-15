@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-department-table
+      author: Yevhenii Polishuchenko
+      changes:
+        - createTable:
+            tableName: department
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: head_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    referencedTableName: lector
+                    referencedColumnNames: id
+                    foreignKeyName: fk_head_id

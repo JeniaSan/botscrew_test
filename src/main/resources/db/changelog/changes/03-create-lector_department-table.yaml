@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-lector_department-table
+      author: Yevhenii Polishuchenko
+      changes:
+        - createTable:
+            tableName: department_lector
+            columns:
+              - column:
+                  name: lector_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    referencedTableName: lector
+                    referencedColumnNames: id
+                    foreignKeyName: fk_lector_id
+              - column:
+                  name: department_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    referencedTableName: department
+                    referencedColumnNames: id
+                    foreignKeyName: fk_department_id
