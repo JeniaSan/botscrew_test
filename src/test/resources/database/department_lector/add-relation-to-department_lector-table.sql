@@ -1,0 +1,1 @@
+insert into department_lector (lector_id, department_id) VALUES (1,1);
